@@ -1,0 +1,8 @@
+{
+  "slug": "dependency-health-rollup",
+  "title": "Dependency Health Rollup",
+  "description": "Summarize dependency status using criticality and observation freshness.",
+  "category": "backend",
+  "demo_args": [],
+  "expected_exit": 0
+}
