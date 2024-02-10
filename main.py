@@ -67,3 +67,15 @@ def rollup(checks, now, max_age_seconds=30):
         reason = "stale check" if stale else effective
         reasons.append("{}: {} ({})".format(check.name, reason, "critical" if check.critical else "optional"))
     return HealthSummary(("healthy", "degraded", "unhealthy")[severity], tuple(reasons), tuple(details))
+
+
+def main():
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    checks = [DependencyCheck("database", "healthy", True, 95),
+              DependencyCheck("payments", "healthy", True, 99),
+              DependencyCheck("recommendations", "unhealthy", False, 98)]
+    print(json.dumps(asdict(rollup(checks, now=100, max_age_seconds=30)), indent=2))
+
+
+if __name__ == "__main__":
+    main()
