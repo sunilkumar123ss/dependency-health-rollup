@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 6 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 7 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -18,7 +18,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 4 | 2023-11-24T17:06:10+05:30 | define dependency observations and summary records (present) |
 | 5 | 2024-01-29T10:36:42+05:30 | apply criticality and freshness policy with deterministic reasons (present) |
 | 6 | 2024-02-10T09:53:54+05:30 | add the deterministic demonstration and command-line entry point (present) |
-| 7 | 2024-02-17T17:31:52+05:30 | test all healthy (later stage) |
+| 7 | 2024-02-17T17:31:52+05:30 | test all healthy (present) |
 | 8 | 2024-04-03T18:25:50+05:30 | test optional failure degrades (later stage) |
 | 9 | 2024-04-08T09:32:27+05:30 | test critical failure and unknown are unhealthy (later stage) |
 | 10 | 2024-06-25T17:45:55+05:30 | test critical degraded is degraded (later stage) |
