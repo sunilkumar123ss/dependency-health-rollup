@@ -17,6 +17,8 @@ class HealthRollupTests(unittest.TestCase):
             with self.subTest(status=status):
                 self.assertEqual(rollup([DependencyCheck('db', status, True, 10)], 10).status, 'unhealthy')
 
+    def test_critical_degraded_is_degraded(self):
+        self.assertEqual(rollup([DependencyCheck('db', 'degraded', True, 10)], 10).status, 'degraded')
 
 
 
