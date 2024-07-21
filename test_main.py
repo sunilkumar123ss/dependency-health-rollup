@@ -20,6 +20,13 @@ class HealthRollupTests(unittest.TestCase):
     def test_critical_degraded_is_degraded(self):
         self.assertEqual(rollup([DependencyCheck('db', 'degraded', True, 10)], 10).status, 'degraded')
 
+    def test_freshness_boundary_and_stale_critical(self):
+        checks = [DependencyCheck('db', 'healthy', True, 0)]
+        self.assertEqual(rollup(checks, 30, 30).status, 'healthy')
+        stale = rollup(checks, 31, 30)
+        self.assertEqual(stale.status, 'unhealthy')
+        self.assertTrue(stale.dependencies[0]['stale'])
+        self.assertEqual(stale.dependencies[0]['reported_status'], 'healthy')
 
 
 
