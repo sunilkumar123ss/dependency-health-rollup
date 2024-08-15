@@ -28,6 +28,8 @@ class HealthRollupTests(unittest.TestCase):
         self.assertTrue(stale.dependencies[0]['stale'])
         self.assertEqual(stale.dependencies[0]['reported_status'], 'healthy')
 
+    def test_empty_is_unknown(self):
+        self.assertEqual(rollup([], 0).status, 'unknown')
 
 
 
