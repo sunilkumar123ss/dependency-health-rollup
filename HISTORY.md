@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 12 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 13 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -24,7 +24,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 10 | 2024-06-25T17:45:55+05:30 | test critical degraded is degraded (present) |
 | 11 | 2024-07-21T14:04:33+05:30 | test freshness boundary and stale critical (present) |
 | 12 | 2024-08-15T16:02:31+05:30 | test empty is unknown (present) |
-| 13 | 2024-09-23T14:07:48+05:30 | test order is deterministic and worst severity wins (later stage) |
+| 13 | 2024-09-23T14:07:48+05:30 | test order is deterministic and worst severity wins (present) |
 | 14 | 2025-01-14T15:06:47+05:30 | test duplicate invalid status and future rejected (later stage) |
 | 15 | 2025-03-20T09:36:02+05:30 | test invalid clock or age rejected (later stage) |
 | 16 | 2025-04-17T14:13:15+05:30 | add isolated tests, demo, and help verification (later stage) |

@@ -31,6 +31,12 @@ class HealthRollupTests(unittest.TestCase):
     def test_empty_is_unknown(self):
         self.assertEqual(rollup([], 0).status, 'unknown')
 
+    def test_order_is_deterministic_and_worst_severity_wins(self):
+        checks = [DependencyCheck('z', 'unhealthy', True, 0), DependencyCheck('a', 'degraded', False, 0)]
+        first = rollup(checks, 1)
+        self.assertEqual(first, rollup(list(reversed(checks)), 1))
+        self.assertEqual(first.status, 'unhealthy')
+        self.assertEqual(first.dependencies[0]['name'], 'a')
 
 
 
