@@ -38,6 +38,11 @@ class HealthRollupTests(unittest.TestCase):
         self.assertEqual(first.status, 'unhealthy')
         self.assertEqual(first.dependencies[0]['name'], 'a')
 
+    def test_duplicate_invalid_status_and_future_rejected(self):
+        for checks in ([DependencyCheck('db', 'healthy', True, 0)] * 2,
+                       [DependencyCheck('db', 'okay', True, 0)],
+                       [DependencyCheck('db', 'healthy', True, 2)]):
+            with self.subTest(checks=checks), self.assertRaises(ValueError): rollup(checks, 1)
 
 
 
