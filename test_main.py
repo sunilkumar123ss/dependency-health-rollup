@@ -44,6 +44,9 @@ class HealthRollupTests(unittest.TestCase):
                        [DependencyCheck('db', 'healthy', True, 2)]):
             with self.subTest(checks=checks), self.assertRaises(ValueError): rollup(checks, 1)
 
+    def test_invalid_clock_or_age_rejected(self):
+        with self.assertRaises(ValueError): rollup([], float('nan'))
+        with self.assertRaises(ValueError): rollup([], 0, -1)
 
 
 if __name__ == '__main__':
